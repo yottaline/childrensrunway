@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('retailer_l_name', 64);
             $table->string('retailer_email', 24)->unique();
             $table->string('retailer_phone');
-            $table->boolean('retailer_approved')->default('1');
+            $table->boolean('retailer_approved')->default('0');
             $table->string('retailer_company', 64);
             $table->string('retailer_city', 64);
             $table->string('retailer_country', 64);

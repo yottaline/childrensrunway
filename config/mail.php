@@ -37,11 +37,11 @@ return [
         'smtp' => [
             'transport' => 'smtp',
             'url' => env('MAIL_URL'),
-            'host' => env('MAIL_HOST', 'mail.sofieamoura.com'),
-            'port' => env('MAIL_PORT', 465),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME', 'b2b@sofieamoura.com'),
-            'password' => env('MAIL_PASSWORD', 'Mohamad&SafaPass'),
+            'host' => env('MAIL_HOST', ''),
+            'port' => env('MAIL_PORT', ''),
+            'encryption' => env('MAIL_ENCRYPTION', ),
+            'username' => env('MAIL_USERNAME', ''),
+            'password' => env('MAIL_PASSWORD', ),
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],
@@ -109,8 +109,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'inf@childrensrunway.com'),
+        'name' => env('MAIL_FROM_NAME', 'childrensrunway'),
     ],
 
     /*

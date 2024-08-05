@@ -25,12 +25,13 @@ Route::middleware('auth')->group(function () {
     Route::prefix('retailers')->group(function(){
         Route::get('/', 'RetailerController@index');
         Route::post('load', 'RetailerController@load');
+        Route::get('/approve/{id}', 'RetailerController@approve');
     });
 
     Route::prefix('visitors')->group(function() {
         Route::get('/', 'VisitorController@index');
         Route::post('load', 'VisitorController@load');
-        Route::get('/approve/{visitorId}', 'VisitorController@approveRequest');
+        Route::get('/approve/{id}', 'VisitorController@approveRequest');
     });
 
     Route::prefix('scans')->group(function(){

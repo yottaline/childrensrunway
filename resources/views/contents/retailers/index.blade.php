@@ -44,7 +44,7 @@
                                 </thead>
                                 <tbody>
                                     <tr ng-repeat="retailer in list track by $index">
-                                        <td ng-bind="retailer.retailer_ID"
+                                        <td ng-bind="retailer.retailer_id"
                                             class="text-center small font-monospace text-uppercase"></td>
                                         <td>
                                             <span class="fw-bold"> <%retailer.retailer_f_name%>
@@ -66,11 +66,9 @@
                                         <td class="text-center" ng-bind="retailer.retailer_address"></td>
 
                                         <td class="col-fit">
-                                            {{-- <button class="btn btn-outline-primary btn-circle bi bi-pencil-square"
-                                                ng-click="setRetailer($index)"></button>
-                                            <button ng-if="retailer.retailer_approved == null"
-                                                class="btn btn-outline-dark btn-circle bi bi-shield-fill-check"
-                                                ng-click="editApproved($index)"></button> --}}
+                                            <button ng-if="!retailer.retailer_approved"
+                                                class="btn btn-outline-primary btn-circle bi bi-check"
+                                                ng-click="editApproved(retailer)"></button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -137,6 +135,18 @@
                             $scope.list = data;
                             console.log(data)
                             $scope.last_id = data[ln - 1].retailer_id;
+                        }
+                    });
+                }, 'json');
+            }
+
+            $scope.editApproved = function(retailer) {
+                $.get('/retailers/approve/' + retailer.retailer_id, function(response) {
+                    $scope.$apply(function() {
+                        if (response.status) {
+                            toastr.success('Approved Successfily and send mail to Retailer');
+                        } else {
+                            toastr.error('Error');
                         }
                     });
                 }, 'json');

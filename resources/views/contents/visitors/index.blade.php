@@ -25,8 +25,6 @@
                         <div class="d-flex">
                             <h5 class="card-title fw-semibold pt-1 me-auto mb-3 text-uppercase">VISITORS</h5>
                             <div>
-                                {{-- <button type="button" class="btn btn-outline-primary btn-circle bi bi-plus-lg"
-                                    ng-click="setVisitors(false)"></button> --}}
                                 <button type="button" class="btn btn-outline-dark btn-circle bi bi-arrow-repeat"
                                     ng-click="load(true)"></button>
                             </div>
@@ -61,8 +59,7 @@
                                                 ng-click="approved(visitor)"></button>
                                         </td>
                                         <td class="col-fit">
-                                            {{-- <button class="btn btn-outline-primary btn-circle bi bi-pencil-square"
-                                                ng-click="setVisitors($index)"></button> --}}
+
                                         </td>
                                     </tr>
                                 </tbody>
@@ -76,87 +73,6 @@
             </div>
         </div>
 
-        <div class="modal fade" id="visitorsModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
-            role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <form id="visitorsForm" method="post" action="/subcategories/submit">
-                            @csrf
-                            <input ng-if="updatevisitors !== false" type="hidden" name="_method" value="put">
-                            <input type="hidden" name="id" ng-value="list[updatevisitors].visitors_id">
-                            <div class="row">
-                                <div class="col-12 col-md-12">
-                                    <div class="mb-3">
-                                        <label for="fullName">visitors Name<b class="text-danger">&ast;</b></label>
-                                        <input id="fullName" name="name" class="form-control" maxlength="120"
-                                            ng-value="list[updatevisitors].visitors_name" required>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer d-flex">
-                        <button type="button" class="btn btn-outline-secondary me-auto"
-                            data-bs-dismiss="modal">Close</button>
-                        <button type="submit" form="visitorsForm" class="btn btn-outline-primary"
-                            ng-disabled="submitting">Submit</button>
-                        <span class="spinner-border spinner-border-sm text-warning ms-2" role="status"
-                            ng-if="submitting"></span>
-                    </div>
-                </div>
-
-                <script>
-                    $(function() {
-                        $('#visitorsForm').on('submit', e => e.preventDefault()).validate({
-                            rules: {
-                                fullName: {
-                                    required: true
-                                }
-                            },
-                            submitHandler: function(form) {
-                                var formData = new FormData(form),
-                                    action = $(form).attr('action'),
-                                    method = $(form).attr('method');
-
-                                scope.$apply(() => scope.submitting = true);
-
-                                $.ajax({
-                                    url: action,
-                                    type: method,
-                                    data: formData,
-                                    processData: false,
-                                    contentType: false,
-                                }).done(function(data, textStatus, jqXHR) {
-                                    var response = JSON.parse(data);
-                                    scope.$apply(() => {
-                                        scope.submitting = false;
-                                        if (response.status) {
-                                            if (scope.updatevisitors === false) {
-                                                scope.list
-                                                    .unshift(
-                                                        response.data);
-                                                clsForm();
-                                            } else scope.list[scope.updatevisitors] = response
-                                                .data;
-                                            toastr.success('Data processed successfully');
-                                            $('#visitorsModal').modal('hide');
-                                        } else toastr.error(response.message);
-                                    });
-                                }).fail(function(jqXHR, textStatus, errorThrown) {
-                                    toastr.error(jqXHR.responseJSON.message);
-                                });
-                            }
-                        });
-                    });
-
-                    clsForm = function() {
-                        $('#fullName').val('');
-                    };
-                </script>
-            </div>
-        </div>
 
     </div>
 @endsection
@@ -216,11 +132,6 @@
                     });
                 }, 'json');
             }
-
-            $scope.setVisitors = (indx) => {
-                $scope.updatevisitors = indx;
-                $('#visitorsModal').modal('show');
-            };
 
             $scope.approved = function(visitor) {
                 $.get('/visitors/approve/' + visitor.visitor_id, function(response) {
