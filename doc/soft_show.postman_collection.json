@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "21847254-be82-477f-9a9b-a804b3ec88bf",
+		"name": "soft_show",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21427392"
+	},
+	"item": [
+		{
+			"name": "visitors",
+			"item": [
+				{
+					"name": "sned request to show",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ahmed",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "a7@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "visitors/submit",
+							"host": [
+								"visitors"
+							],
+							"path": [
+								"submit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "retailers",
+			"item": [
+				{
+					"name": "send reaquest book a place",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fname",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "lname",
+									"value": "hassen",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ali@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "09921928282",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "ALI GROUP",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "badr",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "eqpyt",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "3 RS",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/retailers/submit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"retailers",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
