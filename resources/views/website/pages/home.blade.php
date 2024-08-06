@@ -36,7 +36,19 @@
                 <a href="/visit" class="btn btn-dark rounded-0 mx-3 px-5 text-uppercase btn-lg">Visit</a>
             </div>
         </div>
-        <div class="box" style="background-image: url({{ asset('assets/img/home/2.jpeg') }})"></div>
+
+        <div class="box py-5 bg-dark d-flex flex-column"
+            style="background-image: url({{ asset('assets/img/home/2.jpeg') }})">
+            <div class="container px-5 text-white my-auto">
+                <p class="h5">
+                    Children’s Runway brings together the world's leading children’s fashion brands in one spectacular
+                    event.
+                    Hosted in the heart of Paris, the global capital of fashion, this tradeshow promises to be a
+                    breathtaking
+                    showcase of style, creativity and innovation
+                </p>
+            </div>
+        </div>
         <div class="box" style="background-image: url({{ asset('assets/img/home/3.jpeg') }}); filter: contrast(1.2)">
         </div>
         <div class="box" style="background-image: url({{ asset('assets/img/home/5.jpeg') }})"></div>
