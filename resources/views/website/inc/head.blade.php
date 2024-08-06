@@ -31,6 +31,35 @@
     <script src="//cdn.jsdelivr.net/gh/yottaline/helpers/js/jquery_validator/extend.js?v=1.1.0"></script>
 
     <link rel="stylesheet" href="{{ asset('/assets/css/style.css?v=1.0.0') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&display=swap');
 
+        body {
+            font-family: "Cormorant Garamond", serif;
+            font-style: normal;
+            font-size: 18px;
+        }
+
+        .logo {
+            display: block;
+            height: 30px;
+            margin-bottom: 10px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: invert();
+            background-image: url({{ asset('assets/img/logo_paris_dark.jpeg') }});
+        }
+
+        header .list-inline-item:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        @media (min-width: 576px) {
+            .logo {
+                height: 40px;
+            }
+        }
+    </style>
     @yield('style')
 </head>

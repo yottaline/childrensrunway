@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
 @include('website.inc.head')
 
-<body ng-app="ngApp" ng-controller="ngCtrl" class="h-100">
+<body class="h-100">
+    @include('website.inc.header')
     <div class="d-flex flex-column h-100">
         @yield('contents')
     </div>

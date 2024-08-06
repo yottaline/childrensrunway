@@ -31,4 +31,8 @@ Route::get('/', function () {
     return view('website/pages/home');
 });
 
+Route::get('/about', function () {
+    return view('website/pages/about');
+});
+
 require __DIR__ . '/auth.php';
