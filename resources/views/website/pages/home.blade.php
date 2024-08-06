@@ -32,8 +32,8 @@
                 </p>
             </div>
             <div class="text-end px-4">
-                <a href="/exhibit" class="btn btn-dark rounded-0 mx-3 px-5 text-uppercase btn-lg">Exhibit</a>
-                <a href="/visit" class="btn btn-dark rounded-0 mx-3 px-5 text-uppercase btn-lg">Visit</a>
+                <a href="/exhibit" class="btn btn-dark rounded-0 mx-3 mb-3 px-5 text-uppercase btn-lg">Exhibit</a>
+                <a href="/visit" class="btn btn-dark rounded-0 mx-3 mb-3 px-5 text-uppercase btn-lg">Visit</a>
             </div>
         </div>
 
@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-12 col-sm-8 box py-5 bg-dark d-flex flex-column"
                     style="background-image: url({{ asset('assets/img/home/2.jpeg') }})"></div>
-                <div class="col-12 col-sm-4 d-flex flex-column">
+                <div class="col-12 col-sm-4 d-flex flex-column" style="background-color: #d9bac9;">
                     <p class="my-auto py-5 fw-bold" style="font-size: 1.25rem">
                         Children’s Runway brings together the world's leading children’s fashion brands in one
                         spectacular
