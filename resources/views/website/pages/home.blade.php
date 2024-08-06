@@ -11,7 +11,7 @@
         }
 
         .logo {
-            height: 40px;
+            height: 30px;
             margin-bottom: 10px;
             background-position: center;
             background-size: contain;
@@ -25,49 +25,21 @@
         }
 
         .box {
-            margin: 5px;
-            transform: translateY(-16px);
-            background-size: cover;
+            height: 350px;
             background-position: center;
-            flex-shrink: 1;
-            flex-basis: 10%;
-            -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-            opacity: .8;
-            transition: all ease-in-out 800ms;
-            cursor: pointer;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: all ease-in-out 200ms;
         }
 
-        .box.active {
-            flex-grow: 1;
-            opacity: 1;
-            -webkit-filter: grayscale(0);
-            filter: grayscale(0);
-        }
-
-        .box:nth-child(odd) {
-            transform: translateX(-10px);
-        }
-
-        .box:nth-child(even) {
-            transform: translateX(10px);
-        }
 
         @media (min-width: 576px) {
-            .logo {
-                height: 60px;
-            }
-
             .box {
-                transform: translateX(0);
+                height: 550px;
             }
 
-            .box:nth-child(odd) {
-                transform: translateY(-16px);
-            }
-
-            .box:nth-child(even) {
-                transform: translateY(16px);
+            .logo {
+                height: 40px;
             }
         }
     </style>
@@ -83,12 +55,12 @@
             <li class="list-inline-item"><a href="/contact" class="h5 link-dark">Contact</a></li>
         </ul>
     </header>
-    <div class="container-fluid d-flex justify-content-center flex-column flex-sm-row mt-3 mb-5" style="height: 90%">
-        <div class="box active" style="background-image: url({{ asset('assets/img/home/1.jpeg') }})" data-nxt="1"></div>
-        <div class="box" style="background-image: url({{ asset('assets/img/home/2.jpeg') }})" data-nxt="2"></div>
-        <div class="box" style="background-image: url({{ asset('assets/img/home/3.jpeg') }})" data-nxt="3"></div>
-        <div class="box" style="background-image: url({{ asset('assets/img/home/4.jpeg') }})" data-nxt="4"></div>
-        <div class="box" style="background-image: url({{ asset('assets/img/home/5.jpeg') }})" data-nxt="0"></div>
+    <div class="mt-3 mb-5">
+        <div class="box" style="background-image: url({{ asset('assets/img/home/2.jpeg') }})"></div>
+        <div class="box" style="background-image: url({{ asset('assets/img/home/3.jpeg') }})"></div>
+        <div class="box" style="background-image: url({{ asset('assets/img/home/4.jpeg') }})"></div>
+        <div class="box" style="background-image: url({{ asset('assets/img/home/5.jpeg') }})"></div>
+        <div class="box" style="background-image: url({{ asset('assets/img/home/1.jpeg') }})"></div>
     </div>
 @endsection
 
@@ -100,23 +72,5 @@
         ngApp.controller('ngCtrl', function($scope) {
 
         });
-
-        $(function() {
-            timeInterval = setTimeout(scroll, intrval);
-
-            $('.box').on('click', function() {
-                $('.box').removeClass('active');
-                $(this).addClass('active');
-                current = $(this).index();
-                clearTimeout(timeInterval);
-                timeInterval = setTimeout(scroll, intrval);
-            });
-        });
-
-        function scroll() {
-            timeInterval = setTimeout(scroll, intrval);
-            current = $('.active').data('nxt');
-            $('.box').removeClass('active').eq(current).addClass('active');
-        }
     </script>
 @endsection
