@@ -28,20 +28,6 @@
                 <a class="navbar-brand fw-bold" href="/">{{ __('Dashboard') }}</a>
             </div>
             @yield('search')
-
-            <!-- Example split danger button -->
-            <div class="btn-group">
-                <button type="button" class="btn bi bi-translate text-white dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                </button>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a class="dropdown-item" href="\lang\en">EN</a>
-                    </li>
-                    <li><a class="dropdown-item" href="\lang\ar">AR</a></li>
-                </ul>
-            </div>
-
         </div>
     </nav>
 
@@ -52,8 +38,8 @@
     </div>
 
     @include('layouts.footer')
-</body>
 
-@yield('js')
+    @yield('js')
+</body>
 
 </html>
