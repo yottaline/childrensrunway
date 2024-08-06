@@ -54,7 +54,6 @@
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
-            /* filter: invert(); */
             background-image: url({{ asset('assets/img/logo_paris_dark.png') }});
         }
 

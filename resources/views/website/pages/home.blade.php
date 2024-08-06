@@ -24,8 +24,8 @@
     <div>
         <div class="box py-5 bg-dark d-flex flex-column" style="background-image: url({{ asset('assets/img/home/1.jpeg') }})">
             <div class="container px-5 text-white my-auto">
+                <p class="h1 fw-bold">9 to 11 January 2025</p>
                 <p class="h3 fw-bold">
-                    9 to 11 January 2025<br>
                     Hôtel Marcel Dassault<br>
                     7, Rond-Point des Champs-Elysées Marcel Dassault<br>
                     75008 Paris , France

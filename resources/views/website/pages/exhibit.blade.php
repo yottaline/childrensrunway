@@ -1,6 +1,12 @@
 @extends('website/master')
 @section('title', 'Exhibit')
-
+@section('style')
+    <style>
+        .logo {
+            filter: invert();
+        }
+    </style>
+@endsection
 @section('contents')
     <div class="container py-5" style="max-width: 800px">
         <h4 class="fw-bold text-uppercase">Exhibit</h4>
