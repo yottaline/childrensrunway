@@ -40,6 +40,7 @@
             font-family: "Roboto", sans-serif;
             font-style: normal;
             font-weight: 300;
+            color: #212529
         }
 
         header {
