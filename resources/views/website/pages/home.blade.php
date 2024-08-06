@@ -52,7 +52,7 @@
     <div class="mb-5">
         <div class="box py-5 bg-dark"
             style="background-image: url({{ asset('assets/img/home/3.jpeg') }}); filter: contrast(1.2)">
-            <div class="p-4 text-white me-4 mb-4" style="background-color: rgba(0, 0, 0, .6); max-width: 800px">
+            <div class="p-4 text-white me-4 mb-5" style="background-color: rgba(0, 0, 0, .6); max-width: 800px">
                 <p class="h5">
                     Children's Runway brings together the world's leading children’s fashion brands in one spectacular
                     event.
@@ -68,14 +68,14 @@
                 </p>
             </div>
             <div class="text-end px-4">
-                {{-- <a href="/" class="btn btn-light rounded-0 mx-3 px-5 text-uppercase btn-lg">Visit</a>
-                <a href="/" class="btn btn-light rounded-0 mx-3 px-5 text-uppercase btn-lg">Exhibit</a> --}}
-                <ul class="list-inline">
+                <a href="/" class="btn btn-dark rounded-0 mx-3 px-5 text-uppercase btn-lg">Visit</a>
+                <a href="/" class="btn btn-light rounded-0 mx-3 px-5 text-uppercase btn-lg">Exhibit</a>
+                {{-- <ul class="list-inline">
                     <li class="list-inline-item"><a href="/"
                             class="h4 link-light text-uppercase text-decoration-underline">Visit</a></li>
                     <li class="list-inline-item"><a href="/"
                             class="h4 link-light text-uppercase text-decoration-underline">Exhibit</a></li>
-                </ul>
+                </ul> --}}
             </div>
         </div>
         <div class="box" style="background-image: url({{ asset('assets/img/home/5.jpeg') }})"></div>
