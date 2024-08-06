@@ -35,4 +35,12 @@ Route::get('/about', function () {
     return view('website/pages/about');
 });
 
+Route::get('/exhibit', function () {
+    return view('website/pages/exhibit');
+});
+
+Route::get('/visit', function () {
+    return view('website/pages/visit');
+});
+
 require __DIR__ . '/auth.php';

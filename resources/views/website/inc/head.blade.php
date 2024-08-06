@@ -32,12 +32,14 @@
 
     <link rel="stylesheet" href="{{ asset('/assets/css/style.css?v=1.0.0') }}">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&display=swap'); */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
 
         body {
-            font-family: "Cormorant Garamond", serif;
+            /* font-family: "Cormorant Garamond", serif; */
+            font-family: "Roboto", sans-serif;
             font-style: normal;
-            font-size: 18px;
+            font-weight: 300;
         }
 
         .logo {
