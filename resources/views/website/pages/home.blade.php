@@ -42,7 +42,7 @@
                 <div class="col-12 col-sm-8 box py-5 bg-dark d-flex flex-column"
                     style="background-image: url({{ asset('assets/img/home/2.jpeg') }})"></div>
                 <div class="col-12 col-sm-4 d-flex flex-column">
-                    <p class="my-auto py-5 h3 fw-bold">
+                    <p class="my-auto py-5 h3 fw-bold" style="text-align: justify">
                         Children’s Runway brings together the world's leading children’s fashion brands in one
                         spectacular
                         event.
