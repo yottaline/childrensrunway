@@ -49,7 +49,7 @@
 
         .logo {
             display: block;
-            height: 30px;
+            height: 40px;
             margin-bottom: 10px;
             background-position: center;
             background-size: contain;
@@ -64,7 +64,7 @@
 
         @media (min-width: 576px) {
             .logo {
-                height: 40px;
+                height: 50px;
             }
         }
     </style>
