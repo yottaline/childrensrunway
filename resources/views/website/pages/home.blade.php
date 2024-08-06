@@ -37,16 +37,20 @@
             </div>
         </div>
 
-        <div class="box py-5 bg-dark d-flex flex-column"
-            style="background-image: url({{ asset('assets/img/home/2.jpeg') }})">
-            <div class="container px-5 text-white my-auto">
-                <p class="h5">
-                    Children’s Runway brings together the world's leading children’s fashion brands in one spectacular
-                    event.
-                    Hosted in the heart of Paris, the global capital of fashion, this tradeshow promises to be a
-                    breathtaking
-                    showcase of style, creativity and innovation
-                </p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-6 d-flex flex-column">
+                    <p class="my-auto py-auto">
+                        Children’s Runway Paris brings together the world's leading children’s fashion brands in one
+                        spectacular
+                        event.
+                        Hosted in the heart of Paris, the global capital of fashion, this tradeshow promises to be a
+                        breathtaking
+                        showcase of style, creativity and innovation
+                    </p>
+                </div>
+                <div class="col-12 col-sm-6 box py-5 bg-dark d-flex flex-column"
+                    style="background-image: url({{ asset('assets/img/home/2.jpeg') }}); min-height: 350px;"></div>
             </div>
         </div>
         <div class="box" style="background-image: url({{ asset('assets/img/home/3.jpeg') }}); filter: contrast(1.2)">
