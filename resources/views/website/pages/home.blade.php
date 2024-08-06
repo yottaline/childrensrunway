@@ -56,10 +56,10 @@
         </ul>
     </header>
     <div class="mt-3 mb-5">
-        <div class="box" style="background-image: url({{ asset('assets/img/home/2.jpeg') }})"></div>
         <div class="box" style="background-image: url({{ asset('assets/img/home/3.jpeg') }})"></div>
-        <div class="box" style="background-image: url({{ asset('assets/img/home/4.jpeg') }})"></div>
         <div class="box" style="background-image: url({{ asset('assets/img/home/5.jpeg') }})"></div>
+        <div class="box" style="background-image: url({{ asset('assets/img/home/2.jpeg') }})"></div>
+        <div class="box" style="background-image: url({{ asset('assets/img/home/4.jpeg') }})"></div>
         <div class="box" style="background-image: url({{ asset('assets/img/home/1.jpeg') }})"></div>
     </div>
 @endsection
