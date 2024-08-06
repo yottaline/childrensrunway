@@ -42,6 +42,11 @@
             font-weight: 300;
         }
 
+        header {
+            position: absolute;
+            width: 100%;
+        }
+
         .logo {
             display: block;
             height: 30px;
@@ -49,8 +54,8 @@
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
-            filter: invert();
-            background-image: url({{ asset('assets/img/logo_paris_dark.jpeg') }});
+            /* filter: invert(); */
+            background-image: url({{ asset('assets/img/logo_paris_dark.png') }});
         }
 
         header .list-inline-item:not(:last-child) {
