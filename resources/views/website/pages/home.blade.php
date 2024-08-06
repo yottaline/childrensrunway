@@ -41,7 +41,8 @@
             <div class="row">
                 <div class="col-12 col-sm-8 box py-5 bg-dark d-flex flex-column"
                     style="background-image: url({{ asset('assets/img/home/2.jpeg') }})"></div>
-                <div class="col-12 col-sm-4 d-flex flex-column" style="background-color: #d9bac9;">
+                {{-- <div class="col-12 col-sm-4 d-flex flex-column" style="background-color: #d9bac9;"> --}}
+                <div class="col-12 col-sm-4 d-flex flex-column bg-dark text-light">
                     <p class="my-auto py-5 fw-bold" style="font-size: 1.25rem">
                         Children’s Runway brings together the world's leading children’s fashion brands in one
                         spectacular

@@ -40,7 +40,8 @@
             font-family: "Roboto", sans-serif;
             font-style: normal;
             font-weight: 300;
-            color: #212529
+            color: #212529;
+            letter-spacing: 1.5px;
         }
 
         header {
