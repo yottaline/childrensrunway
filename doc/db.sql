@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS
     `reg_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
     `reg_code` VARCHAR(6) NOT NULL,
     `reg_reference` VARCHAR(24) NOT NULL,
-    `reg_referral` VARCHAR(24) NOT NULL,
+    `reg_referral` VARCHAR(24) DEFAULT NULL,
     `reg_firstname` VARCHAR(120) NOT NULL,
     `reg_lastname` VARCHAR(120) NOT NULL,
     `reg_jobtitle` VARCHAR(120) NOT NULL,
@@ -66,5 +66,22 @@ CREATE TABLE IF NOT EXISTS
     `reg_products_style` VARCHAR(1024) NOT NULL,
     `reg_status` TINYINT UNSIGNED NOT NULL DEFAULT '1',
     `reg_create` DATETIME NOT NULL,
-    PRIMARY KEY (`reg_id`)
+    PRIMARY KEY (`reg_id`),
+    KEY `reg_code` (`reg_code`),
+    KEY `reg_reference` (`reg_reference`),
+    KEY `reg_referral` (`reg_referral`)
+  ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS
+  `promo_codes` (
+    `promo_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `promo_code` VARCHAR(6) NOT NULL,
+    `promo_exhibitor` INT UNSIGNED NOT NULL,
+    `promo_discount` TINYINT UNSIGNED NOT NULL,
+    `promo_status` TINYINT UNSIGNED NOT NULL DEFAULT '1',
+    `promo_create` DATETIME NOT NULL,
+    `promo_expire` DATETIME NOT NULL,
+    PRIMARY KEY (`promo_id`),
+    KEY `promo_code` (`promo_code`),
+    FOREIGN KEY (`promo_code`) REFERENCES `exhibitor_registers` (`reg_id`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
