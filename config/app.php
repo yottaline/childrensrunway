@@ -9,7 +9,7 @@ return [
     'env' => env('APP_ENV', 'local'),
     'debug' => (bool) env('APP_DEBUG', true),
 
-    'url' => env('APP_URL', 'http://childrensrunway.smodeb2b.com'),
+    'url' => env('APP_URL', 'https://childrensrunway.cloud'),
     'asset_url' => env('ASSET_URL'),
 
     'timezone' => 'UTC',
