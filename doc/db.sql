@@ -42,8 +42,11 @@ CREATE TABLE IF NOT EXISTS
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 
 CREATE TABLE IF NOT EXISTS
-  `exhibitor_register` (
+  `exhibitor_registers` (
     `reg_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `reg_code` VARCHAR(6) NOT NULL,
+    `reg_reference` VARCHAR(24) NOT NULL,
+    `reg_referral` VARCHAR(24) NOT NULL,
     `reg_firstname` VARCHAR(120) NOT NULL,
     `reg_lastname` VARCHAR(120) NOT NULL,
     `reg_jobtitle` VARCHAR(120) NOT NULL,
@@ -61,5 +64,7 @@ CREATE TABLE IF NOT EXISTS
     `reg_company_exhibitions` VARCHAR(1024) NOT NULL,
     `reg_products_list` VARCHAR(1024) NOT NULL,
     `reg_products_style` VARCHAR(1024) NOT NULL,
+    `reg_status` TINYINT UNSIGNED NOT NULL DEFAULT '1',
+    `reg_create` DATETIME NOT NULL,
     PRIMARY KEY (`reg_id`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
